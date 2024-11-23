@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway.ttf') format('truetype');
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: #1f0707;
+    color: white;
+}
+
+.container-container {
+    /* center the page */
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    /* center the page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.3em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.pfp {
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    /* make it have a animation when hovering */
+    transition: transform 0.25s ease-in-out;
+}
+
+.pfp:hover {
+    transform: scale(1.1);
+}
+
+/* change the socials to show in a row */
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+
+    padding: 0.5em;
+    border-radius: 0.75em;
+
+    /* set the size of the socials to a uniform size */
+    width: 100px;
+    height: 100px;
+}
+
+.social img {
+    width: 50px;
+    height: 50px;
+    margin: 0.5em;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+/* make the socials fade in */
+.social-container {
+    animation: fade-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* make the socials fade in one by one */
+.social-container:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.social-container:nth-child(2) {
+    animation-delay: 1s;
+}
+.social-container:nth-child(3) {
+    animation-delay: 1.5s;
+}
+.social-container:nth-child(4) {
+    animation-delay: 2s;
+}
+.social-container:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+/* make the socials fade in and move up */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(12.5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* make the name have a gradient, and a font weight change when hovering */
+.name {
+    background-image: linear-gradient(to right, #F84028, #F2913D);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: font-weight 0.25s ease-in-out;
+    font-weight: 600;
+}
+
+.name:hover {
+    font-weight: 800;
+}
+
+
+/* makes the socials move up when hovering */
+.social {
+    transition: transform 0.25s ease-in-out;
+}
+
+.social:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* artwork site */
+
+.artwork {
+    /* makes it show in a grid like fashion */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+
+    text-align: center;
+
+    padding: 0.5em;
+}
+
+.image * {
+    text-decoration: none;
+}
+
+.artist {
+    text-decoration: solid underline;
+}
+
+.image img {
+    /* make the images fit in the container */
+    width: 300px;
+    margin: 0.5em;
+}
+
+img.emoji {
+    width: 32px;
+    margin: 0.0em;
+}
+
+.go-back {
+    margin: 0.5em;
+    font-size: 1.5em;
+}
