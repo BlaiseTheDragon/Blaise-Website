@@ -193,6 +193,10 @@ p {
     margin: 0.5em;
 }
 
+.image.large img {
+    width: 500px;
+}
+
 img.emoji {
     width: 32px;
     margin: 0.0em;
